@@ -1,143 +1,193 @@
-import os
 import json
-import streamlit as st
+import os
 import pandas as pd
+import streamlit as st
 
 st.set_page_config(page_title="중고 PC 매입 가액 계산기", layout="wide")
 
+
+# 1. 시세 데이터 로드
 @st.cache_data(ttl=3600)
 def load_price_data():
-    if os.path.exists("prices.json"):
-        with open("prices.json", "r", encoding="utf-8") as f:
-            return json.load(f)
-    return None
+  if os.path.exists("prices.json"):
+    with open("prices.json", "r", encoding="utf-8") as f:
+      return json.load(f)
+  return None
+
 
 price_data = load_price_data()
 
 st.title("💻 중고 PC 매입 가액 계산기")
 
 if not price_data:
-    st.error("⚠️ 시세 데이터(prices.json)를 불러올 수 없습니다. GitHub Actions를 확인해 주세요.")
-    st.stop()
+  st.error(
+      "⚠️ 시세 데이터(prices.json)를 불러올 수 없습니다. GitHub Actions"
+      " 상태를 확인해주세요."
+  )
+  st.stop()
 
 items = price_data.get("items", [])
 prices_map = price_data.get("prices", {})
 updated_at = price_data.get("updated_at", "알 수 없음")
 total_count = price_data.get("count", len(prices_map))
 
-st.caption(f"📅 최근 시세 업데이트: **{updated_at}** (월드메모리 연동 **{total_count:,}개** 수집 중)")
+st.caption(
+    f"📅 최근 시세 업데이트: **{updated_at}** (월드메모리 실시간 **{total_count:,}개**"
+    " 부품 연동 중)"
+)
 
+# 세션 상태 초기화
 if "cart" not in st.session_state:
-    st.session_state.cart = []
+  st.session_state.cart = []
 
-# --- 1. 부품 검색 및 선택 ---
-st.subheader("1. 부품 검색 및 선택")
+# --- 1. 부품 검색 및 세대별 리스트 표 영역 ---
+st.subheader("1. 부품 선택 (카테고리 / 세대별 단가표)")
 
-# DF화하여 필터링 편의 제공
-df_items = pd.DataFrame(items) if items else pd.DataFrame(columns=["category", "sub", "detail", "name", "price"])
+df_items = (
+    pd.DataFrame(items)
+    if items
+    else pd.DataFrame(columns=["category", "sub", "detail", "name", "price"])
+)
 
-# 1차 필터: 카테고리 (CPU, 메인보드, 메모리 등)
-categories = ["전체"] + list(df_items["category"].unique()) if not df_items.empty else ["전체"]
-col_cat, col_sub, col_detail = st.columns(3)
+# 1단계: 대분류 선택 (CPU, 메인보드, 메모리, 그래픽카드 등)
+categories = (
+    list(df_items["category"].unique())
+    if not df_items.empty
+    else ["CPU", "메인보드", "메모리", "그래픽카드"]
+)
+selected_cat = st.radio("【 대분류 】", categories, horizontal=True)
 
-with col_cat:
-    selected_cat = st.selectbox("1. 품목 선택", categories)
+df_cat = df_items[df_items["category"] == selected_cat]
 
-filtered = df_items.copy()
-if selected_cat != "전체":
-    filtered = filtered[filtered["category"] == selected_cat]
+# 2단계: 제조사 / 세대 / 소켓 선택 (탭/버튼 형태)
+details = list(df_cat["detail"].unique()) if not df_cat.empty else []
 
-# 2차 필터: 제조사/제조구분 (INTEL, AMD, NVIDIA 등)
-subs = ["전체"] + list(filtered["sub"].unique()) if not filtered.empty else ["전체"]
-with col_sub:
-    selected_sub = st.selectbox("2. 제조사 / 구분", subs)
-
-if selected_sub != "전체":
-    filtered = filtered[filtered["sub"] == selected_sub]
-
-# 3차 필터: 세대 / 소켓 (14세대, 12세대, DDR4, RTX30 등)
-details = ["전체"] + list(filtered["detail"].unique()) if not filtered.empty else ["전체"]
-with col_detail:
-    selected_detail = st.selectbox("3. 세대 / 소켓 / 분류", details)
-
-if selected_detail != "전체":
-    filtered = filtered[filtered["detail"] == selected_detail]
-
-st.divider()
-
-# 선택된 항목에 따른 최종 제품 선택 dropdown
-if not filtered.empty:
-    product_options = filtered["name"].tolist()
+if details:
+  selected_detail = st.radio("【 세대 / 소켓 / 세부구분 】", details, horizontal=True)
+  df_filtered = df_cat[df_cat["detail"] == selected_detail]
 else:
-    product_options = list(prices_map.keys())
+  df_filtered = df_cat
 
-c_prod, c_price, c_qty, c_add = st.columns([3.5, 1.5, 1, 1])
+st.write("")
 
-with c_prod:
-    selected_product = st.selectbox("상품 선택 (검색 가능)", product_options)
+# 3단계: 선택된 세대의 단가표 테이블 출력
+if not df_filtered.empty:
+  st.markdown(
+      f"#### 📋 **[{selected_cat} > {selected_detail if details else ''}]**"
+      " 매입 단가표"
+  )
 
-unit_price = prices_map.get(selected_product, 0)
+  # 검색 기능 추가
+  search_keyword = st.text_input(
+      "🔍 해당 세대 내 상품명 검색 (예: 14900, RTX 3070 등)", ""
+  )
+  if search_keyword:
+    df_filtered = df_filtered[
+        df_filtered["name"].str.contains(search_keyword, case=False)
+    ]
 
-with c_price:
-    st.write("**매입 단가**")
-    st.markdown(f"<h4 style='margin:0; color:#1E88E5;'>{unit_price:,} 원</h4>", unsafe_allow_html=True)
+  # 헤더 출력
+  h_col1, h_col2, h_col3, h_col4, h_col5 = st.columns([1.5, 4.5, 2, 1.5, 1.5])
+  with h_col1:
+    st.markdown("**분류**")
+  with h_col2:
+    st.markdown("**상품명**")
+  with h_col3:
+    st.markdown("**매입 단가**")
+  with h_col4:
+    st.markdown("**수량**")
+  with h_col5:
+    st.markdown("**추가**")
 
-with c_qty:
-    quantity = st.number_input("수량", min_value=1, max_value=99, value=1, step=1)
+  st.markdown("---")
 
-with c_add:
-    st.write("")
-    st.write("")
-    if st.button("➕ 품목 추가", use_container_width=True):
+  # 테이블 리스트 행 출력
+  for idx, row in df_filtered.iterrows():
+    col1, col2, col3, col4, col5 = st.columns([1.5, 4.5, 2, 1.5, 1.5])
+
+    with col1:
+      st.write(f"[{row['detail']}]")
+    with col2:
+      st.write(f"**{row['name']}**")
+    with col3:
+      st.write(f"{row['price']:,} 원")
+    with col4:
+      qty = st.number_input(
+          "수량",
+          min_value=1,
+          max_value=99,
+          value=1,
+          key=f"qty_{idx}",
+          label_visibility="collapsed",
+      )
+    with col5:
+      if st.button("➕ 추가", key=f"btn_{idx}", use_container_width=True):
         st.session_state.cart.append({
-            "품목": selected_cat,
-            "상품": selected_product,
-            "단가": unit_price,
-            "수량": quantity,
-            "금액": unit_price * quantity
+            "품목": row["category"],
+            "상품": row["name"],
+            "단가": row["price"],
+            "수량": qty,
+            "금액": row["price"] * qty,
         })
-        st.success("견적에 추가되었습니다!")
+        st.toast(f"'{row['name']}' 항목이 추가되었습니다!", icon="✅")
         st.rerun()
 
+else:
+  st.info("해당 카테고리에 등록된 부품이 없습니다.")
+
 st.divider()
 
-# --- 2. 하단 견적 내역 ---
+# --- 2. 하단 견적 내역 및 총 금액 ---
 st.subheader("2. 매입 계산 내역")
 
 if not st.session_state.cart:
-    st.info("상단에서 부품을 선택한 후 **[➕ 품목 추가]** 버튼을 누르면 견적서가 생성됩니다.")
+  st.info(
+      "위 단가표에서 원하는 부품의 **[➕ 추가]** 버튼을 눌러 매입 견적표를"
+      " 생성해 보세요."
+  )
 else:
-    cart_df = pd.DataFrame(st.session_state.cart)
-    
-    edited_df = st.data_editor(
-        cart_df,
-        column_config={
-            "품목": st.column_config.TextColumn("품목", disabled=True),
-            "상품": st.column_config.TextColumn("상품", disabled=True),
-            "단가": st.column_config.NumberColumn("단가", format="%d 원", disabled=True),
-            "수량": st.column_config.NumberColumn("수량", min_value=1, max_value=99, step=1),
-            "금액": st.column_config.NumberColumn("금액", format="%d 원", disabled=True),
-        },
-        num_rows="dynamic",
-        use_container_width=True,
-        hide_index=True
+  cart_df = pd.DataFrame(st.session_state.cart)
+
+  edited_df = st.data_editor(
+      cart_df,
+      column_config={
+          "품목": st.column_config.TextColumn("품목", disabled=True),
+          "상품": st.column_config.TextColumn("상품명", disabled=True),
+          "단가": st.column_config.NumberColumn(
+              "단가", format="%d 원", disabled=True
+          ),
+          "수량": st.column_config.NumberColumn(
+              "수량", min_value=1, max_value=99, step=1
+          ),
+          "금액": st.column_config.NumberColumn(
+              "합계 금액", format="%d 원", disabled=True
+          ),
+      },
+      num_rows="dynamic",
+      use_container_width=True,
+      hide_index=True,
+  )
+
+  # 수량 변경 시 금액 반영
+  edited_df["금액"] = edited_df["단가"] * edited_df["수량"]
+  st.session_state.cart = edited_df.to_dict("records")
+
+  total_amount = edited_df["금액"].sum()
+
+  st.markdown("---")
+  c_reset, c_total = st.columns([2, 2])
+
+  with c_reset:
+    if st.button("🗑️ 견적서 전체 초기화"):
+      st.session_state.cart = []
+      st.rerun()
+
+  with c_total:
+    st.markdown(
+        f"<div style='text-align: right; background-color: #f0f2f6; padding:"
+        " 15px; border-radius: 10px;'>"
+        f"<h3 style='margin:0;'>총 매입 예상 금액: <span"
+        f" style='color:#E53935;'>{total_amount:,} 원</span></h3>"
+        "</div>",
+        unsafe_allow_html=True,
     )
-    
-    edited_df["금액"] = edited_df["단가"] * edited_df["수량"]
-    st.session_state.cart = edited_df.to_dict("records")
-    
-    total_amount = edited_df["금액"].sum()
-    
-    c_reset, c_total = st.columns([2, 2])
-    with c_reset:
-        if st.button("🗑️ 견적서 전체 초기화"):
-            st.session_state.cart = []
-            st.rerun()
-            
-    with c_total:
-        st.markdown(
-            f"<div style='text-align: right; background-color: #f0f2f6; padding: 15px; border-radius: 10px;'>"
-            f"<h3 style='margin:0;'>총 매입 예상 금액: <span style='color:#E53935;'>{total_amount:,} 원</span></h3>"
-            f"</div>",
-            unsafe_allow_html=True
-        )
