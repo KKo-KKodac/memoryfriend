@@ -36,12 +36,9 @@ st.caption(
     " 부품 연동 중)"
 )
 
-# 세션 상태 초기화
+# 세션 상태 초기화 (견적서 장바구니)
 if "cart" not in st.session_state:
   st.session_state.cart = []
-
-# --- 1. 부품 검색 및 세대별 리스트 표 영역 ---
-st.subheader("1. 부품 선택 (카테고리 / 세대별 단가표)")
 
 df_items = (
     pd.DataFrame(items)
@@ -49,44 +46,57 @@ df_items = (
     else pd.DataFrame(columns=["category", "sub", "detail", "name", "price"])
 )
 
-# 1단계: 대분류 선택 (CPU, 메인보드, 메모리, 그래픽카드 등)
-categories = (
-    list(df_items["category"].unique())
-    if not df_items.empty
-    else ["CPU", "메인보드", "메모리", "그래픽카드"]
+# --- 1. 부품 검색 및 선택 영역 ---
+st.subheader("1. 부품 검색 및 선택")
+
+# [통합 검색창]
+search_query = st.text_input(
+    "🔍 **전체 품목 검색** (모델명이나 스펙을 입력하세요 ex: 14900, 3070, DDR4"
+    " 16G)",
+    placeholder="검색어를 입력하면 카테고리와 상관없이 전체 시세에서 검색됩니다.",
 )
-selected_cat = st.radio("【 대분류 】", categories, horizontal=True)
-
-df_cat = df_items[df_items["category"] == selected_cat]
-
-# 2단계: 제조사 / 세대 / 소켓 선택 (탭/버튼 형태)
-details = list(df_cat["detail"].unique()) if not df_cat.empty else []
-
-if details:
-  selected_detail = st.radio("【 세대 / 소켓 / 세부구분 】", details, horizontal=True)
-  df_filtered = df_cat[df_cat["detail"] == selected_detail]
-else:
-  df_filtered = df_cat
 
 st.write("")
 
-# 3단계: 선택된 세대의 단가표 테이블 출력
+# 지정해주신 7가지 대분류
+FIXED_CATEGORIES = [
+    "CPU",
+    "메인보드",
+    "메모리",
+    "SSD",
+    "HDD",
+    "그래픽카드",
+    "파워",
+]
+
+if search_query.strip():
+  # 검색어가 입력된 경우: 전체 데이터에서 검색 결과 표출
+  st.markdown(f"#### 🔎 **'{search_query}'** 전체 검색 결과")
+  df_filtered = df_items[
+      df_items["name"].str.contains(search_query, case=False, na=False)
+  ]
+else:
+  # 검색어가 없는 경우: 7가지 대분류 탭 -> 세대/소켓 라디오 선택 방식
+  selected_cat = st.radio("【 품목 대분류 】", FIXED_CATEGORIES, horizontal=True)
+
+  df_cat = df_items[df_items["category"] == selected_cat]
+
+  # 세부 분류(세대 / 소켓 / 스펙) 추출
+  details = list(df_cat["detail"].unique()) if not df_cat.empty else []
+
+  if details:
+    selected_detail = st.radio(
+        "【 세대 / 소켓 / 세부구분 】", details, horizontal=True
+    )
+    df_filtered = df_cat[df_cat["detail"] == selected_detail]
+  else:
+    df_filtered = df_cat
+
+# --- 2. 단가표 테이블 출력 ---
 if not df_filtered.empty:
-  st.markdown(
-      f"#### 📋 **[{selected_cat} > {selected_detail if details else ''}]**"
-      " 매입 단가표"
-  )
+  st.markdown("---")
 
-  # 검색 기능 추가
-  search_keyword = st.text_input(
-      "🔍 해당 세대 내 상품명 검색 (예: 14900, RTX 3070 등)", ""
-  )
-  if search_keyword:
-    df_filtered = df_filtered[
-        df_filtered["name"].str.contains(search_keyword, case=False)
-    ]
-
-  # 헤더 출력
+  # 테이블 헤더
   h_col1, h_col2, h_col3, h_col4, h_col5 = st.columns([1.5, 4.5, 2, 1.5, 1.5])
   with h_col1:
     st.markdown("**분류**")
@@ -101,12 +111,12 @@ if not df_filtered.empty:
 
   st.markdown("---")
 
-  # 테이블 리스트 행 출력
+  # 테이블 리스트 출력
   for idx, row in df_filtered.iterrows():
     col1, col2, col3, col4, col5 = st.columns([1.5, 4.5, 2, 1.5, 1.5])
 
     with col1:
-      st.write(f"[{row['detail']}]")
+      st.write(f"[{row.get('detail', row.get('category', '일반'))}]")
     with col2:
       st.write(f"**{row['name']}**")
     with col3:
@@ -123,7 +133,7 @@ if not df_filtered.empty:
     with col5:
       if st.button("➕ 추가", key=f"btn_{idx}", use_container_width=True):
         st.session_state.cart.append({
-            "품목": row["category"],
+            "품목": row.get("category", "부품"),
             "상품": row["name"],
             "단가": row["price"],
             "수량": qty,
@@ -133,17 +143,17 @@ if not df_filtered.empty:
         st.rerun()
 
 else:
-  st.info("해당 카테고리에 등록된 부품이 없습니다.")
+  st.info("검색 조건에 맞는 부품이 없습니다.")
 
 st.divider()
 
-# --- 2. 하단 견적 내역 및 총 금액 ---
+# --- 3. 하단 매입 계산 내역 및 총 금액 ---
 st.subheader("2. 매입 계산 내역")
 
 if not st.session_state.cart:
   st.info(
-      "위 단가표에서 원하는 부품의 **[➕ 추가]** 버튼을 눌러 매입 견적표를"
-      " 생성해 보세요."
+      "상단 단가표에서 원하는 부품의 **[➕ 추가]** 버튼을 누르면 매입"
+      " 견적표가 작성됩니다."
   )
 else:
   cart_df = pd.DataFrame(st.session_state.cart)
