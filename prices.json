@@ -1,7 +1,2239 @@
 {
-  "updated_at": "2026-09-03 14:39:36",
-  "count": 591,
+  "updated_at": "2026-09-03 15:48:50",
+  "count": 317,
+  "items": [
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라9 285K",
+      "price": 295000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라9 285",
+      "price": 285000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라7 265K",
+      "price": 195000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라7 265",
+      "price": 185000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라7 265KF",
+      "price": 170000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라7 265F",
+      "price": 160000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라5 245K",
+      "price": 110000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라5 245KF",
+      "price": 100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라5 235",
+      "price": 85000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라5 225",
+      "price": 75000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대/13세대",
+      "name": "울트라5 225F",
+      "price": 65000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I9 11900k",
+      "price": 280000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I9 11900",
+      "price": 270000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I9 11900KF",
+      "price": 155000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I9 11900F",
+      "price": 150000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I7 11700",
+      "price": 155000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I7 11700K",
+      "price": 155000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I7 11700KF",
+      "price": 120000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I7 11700F",
+      "price": 120000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I5 11600",
+      "price": 100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I5 11600K",
+      "price": 100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I5 11600KF",
+      "price": 80000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I5 11500",
+      "price": 120000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I5 11500F",
+      "price": 80000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I5 11400",
+      "price": 110000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I5 11400F",
+      "price": 80000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "12세대",
+      "name": "로켓I5 11600F",
+      "price": 55000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I9 10900K",
+      "price": 350000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I9 10900KF",
+      "price": 175000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I9 10900",
+      "price": 400000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I9 10900F",
+      "price": 170000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I7 10700K",
+      "price": 220000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I7 10700KF",
+      "price": 140000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I7 10700",
+      "price": 160000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I7 10700F",
+      "price": 135000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I5 10600K",
+      "price": 100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I5 10600KF",
+      "price": 90000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I5 10600",
+      "price": 100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I5 10500",
+      "price": 115000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I5 10500F",
+      "price": 100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I5 10400",
+      "price": 110000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I5 10400F",
+      "price": 90000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I3 10100",
+      "price": 80000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I3 10100F",
+      "price": 50000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧G6400",
+      "price": 18000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧G5900",
+      "price": 12000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧G6405",
+      "price": 18000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I5 10600F",
+      "price": 65000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧G5905",
+      "price": 12000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧I3 10105F",
+      "price": 50000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "11세대",
+      "name": "코멧G5925",
+      "price": 12000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피I7 8700K",
+      "price": 72000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피I7 8700",
+      "price": 72000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피I5 8600K",
+      "price": 35000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피I5 8600",
+      "price": 35000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피I5 8500",
+      "price": 35000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피I5 8400",
+      "price": 33000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피I3 8350K",
+      "price": 11000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피I3 8100",
+      "price": 10000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피G5600",
+      "price": 500
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피G5400",
+      "price": 500
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피G4920",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "10세대",
+      "name": "커피G4900",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I7 7700K",
+      "price": 45000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I7 7700",
+      "price": 37000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I5 7600K",
+      "price": 14000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I5 7600",
+      "price": 14000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I5 7500",
+      "price": 14000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I5 7400",
+      "price": 11000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I3 7350K",
+      "price": 800
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I3 7320",
+      "price": 800
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I3 7300",
+      "price": 800
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비I3 7100",
+      "price": 800
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비G4620",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비G4600",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비G4560",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비G3950",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "9세대",
+      "name": "카비G3930",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I7 6700K",
+      "price": 28000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I7 6700",
+      "price": 32000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I5 6600K",
+      "price": 9000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I5 6600",
+      "price": 9000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I5 6500",
+      "price": 9000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I5 6400",
+      "price": 8000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I3 6320",
+      "price": 700
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I3 6300",
+      "price": 700
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이I3 6100",
+      "price": 700
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이G4520",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이G4500",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이G4400",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이G3920",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "8세대",
+      "name": "스카이G3900",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I7 4790K",
+      "price": 40000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I7 4790",
+      "price": 36000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I7 4770K",
+      "price": 35000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I7 4770",
+      "price": 35000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4690K",
+      "price": 10000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4690",
+      "price": 10000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4670K",
+      "price": 9000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4670",
+      "price": 9000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4590",
+      "price": 9000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4570",
+      "price": 9000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4460",
+      "price": 8000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4450",
+      "price": 7000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4440",
+      "price": 7000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I5 4430",
+      "price": 7000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I3 4370",
+      "price": 700
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I3 4360",
+      "price": 700
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I3 4340",
+      "price": 700
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I3 4330",
+      "price": 700
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I3 4170",
+      "price": 500
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I3 4160",
+      "price": 500
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I3 4150",
+      "price": 500
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰I3 4130",
+      "price": 500
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3460",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3450",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3440",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3430",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3420",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3260",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3258",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3250",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3240",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G3220",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G1850",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G1840",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G1830",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "7세대",
+      "name": "하스웰G1820",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I7 2700K",
+      "price": 23000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I7 2600K",
+      "price": 23000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I7 2600",
+      "price": 23000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I5 2500K",
+      "price": 4000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I5 2500",
+      "price": 4000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I5 2400",
+      "price": 4000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I5 2320",
+      "price": 2000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I5 2310",
+      "price": 2000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I5 2300",
+      "price": 2000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I3 2130",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I3 2120",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I3 2105",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디I3 2100",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G870",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G860",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G850",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G840",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G645",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G640",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G630",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G620",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G550",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G540",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "6세대",
+      "name": "샌디G530",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "린필드I7 880",
+      "price": 400
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "린필드I7 875K",
+      "price": 400
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "린필드I7 870",
+      "price": 400
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "린필드I7 860",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "린필드I5 760",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "린필드I5 750",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "클락데일I5 661",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "클락데일I5 660",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "클락데일I5 650",
+      "price": 200
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "클락데일I3 550",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "클락데일I3 540",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "클락데일I3 530",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "4세대",
+      "name": "클락데일G6950",
+      "price": 100
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I9 9900K",
+      "price": 180000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I9 9900",
+      "price": 180000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I9 9900KF",
+      "price": 140000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I7 9700",
+      "price": 90000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I7 9700K",
+      "price": 100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I7 9700KF",
+      "price": 85000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I7 9700F",
+      "price": 80000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I5 9600K",
+      "price": 50000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I5 9600",
+      "price": 50000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I5 9600KF",
+      "price": 45000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I5 9600F",
+      "price": 45000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I5 9500",
+      "price": 55000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I5 9500F",
+      "price": 45000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I5 9400",
+      "price": 55000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I5 9400F",
+      "price": 45000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I3 9100",
+      "price": 17000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피I3 9100F",
+      "price": 9000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피G5620",
+      "price": 500
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피G5420",
+      "price": 500
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "1~3세대/이전",
+      "name": "커피G4930",
+      "price": 300
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠9 라파엘7950X3D",
+      "price": 340000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠9 라파엘7950X",
+      "price": 300000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠9 라파엘7900X3D",
+      "price": 270000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠9 라파엘7900X",
+      "price": 200000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠9 라파엘7900",
+      "price": 140000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠7 라파엘7800X3D",
+      "price": 210000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠7 라파엘7700X",
+      "price": 140000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠7 라파엘7700",
+      "price": 95000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠5 라파엘7600X",
+      "price": 85000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠5 라파엘7600",
+      "price": 80000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠5 라파엘7500F",
+      "price": 60000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠7 피닉스8700G",
+      "price": 140000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠5 피닉스8600G",
+      "price": 80000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠5 피닉스8500G",
+      "price": 50000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠7 피닉스8700F",
+      "price": 90000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠5 피닉스8400F",
+      "price": 40000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 AM5/AM4",
+      "name": "라이젠5 라파엘7400F",
+      "price": 50000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠7 르누아르4750G",
+      "price": 80000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠5 르누아르4650G",
+      "price": 70000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠3 르누아르4350G",
+      "price": 55000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠3 르누아르4100",
+      "price": 20000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠9 마티스3900X/XT",
+      "price": 90000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠7 마티스3800X/XT",
+      "price": 70000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠7 마티스3700X",
+      "price": 65000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠5 마티스3600X/XT",
+      "price": 42000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠5 마티스3600",
+      "price": 40000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠5 마티스3500X",
+      "price": 23000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠5 피카소3400G",
+      "price": 35000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠3 피카소3200G",
+      "price": 25000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠5 마티스3500",
+      "price": 22000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠3 마티스3300X",
+      "price": 13000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠3 마티스3100",
+      "price": 12000
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "라이젠 이전",
+      "name": "라이젠3 마티스3000G",
+      "price": 2000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3090 TI",
+      "price": 650000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3090 24G",
+      "price": 600000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3080 TI 12G",
+      "price": 330000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3080 12GB",
+      "price": 300000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3080 10G",
+      "price": 260000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3070 TI 8G",
+      "price": 230000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3070 8G",
+      "price": 220000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3060 TI 8G",
+      "price": 200000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3060 12GB",
+      "price": 200000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3060 8GB",
+      "price": 150000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3050 8GB",
+      "price": 120000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1700 (12~14세대)",
+      "name": "RTX 3050 6GB",
+      "price": 100000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1200 (10~11세대)",
+      "name": "RTX2080 TI 11G",
+      "price": 170000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1200 (10~11세대)",
+      "name": "RTX2080 8G SUPER",
+      "price": 160000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1200 (10~11세대)",
+      "name": "RTX2080 8G",
+      "price": 150000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1200 (10~11세대)",
+      "name": "RTX2070 SUPER",
+      "price": 150000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1200 (10~11세대)",
+      "name": "RTX2070 8G",
+      "price": 140000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1200 (10~11세대)",
+      "name": "RTX2060 8G SUPER",
+      "price": 135000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1200 (10~11세대)",
+      "name": "RTX2060 6G(HDMI+DP)",
+      "price": 130000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GTX780 TI",
+      "price": 30000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GTX780",
+      "price": 27000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GTX770",
+      "price": 25000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GTX760",
+      "price": 22000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GTX750 TI (HDMI+DVI)",
+      "price": 22000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GTX750 (HDMI or DVI) 2가지 포트중 1개는 필수",
+      "price": 15000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GT730 (DVI+HDMI+D SUB)",
+      "price": 3000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GT720 1G (HDMI+DVI+RGB)",
+      "price": 3000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151v2 (8~9세대)",
+      "name": "GT710 (HDMI+DVI+RGB)",
+      "price": 3000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151 (6~7세대)",
+      "name": "GTX980 TI",
+      "price": 40000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151 (6~7세대)",
+      "name": "GTX980",
+      "price": 35000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151 (6~7세대)",
+      "name": "GTX970",
+      "price": 32000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151 (6~7세대)",
+      "name": "GTX960 4G",
+      "price": 30000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151 (6~7세대)",
+      "name": "GTX960 2G(HDMI+DVI+DP)",
+      "price": 28000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1151 (6~7세대)",
+      "name": "GTX950",
+      "price": 23000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1660 TI",
+      "price": 110000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1660 SUPER(HDMI+DP)",
+      "price": 110000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1660 6G",
+      "price": 100000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1650",
+      "price": 70000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1080 TI 11G",
+      "price": 100000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1080 8G(HDMI+DVI+DP)",
+      "price": 90000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1070 TI 8G",
+      "price": 85000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1070 8G(HDMI+DVI+DP)",
+      "price": 80000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1060 6G",
+      "price": 70000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1060 3G",
+      "price": 60000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1050 TI",
+      "price": 50000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GTX1050",
+      "price": 40000
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "LGA1150 (4세대)",
+      "name": "GT1030 2G(DVI+HDMI)",
+      "price": 20000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6950 XT",
+      "price": 230000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6900 XT",
+      "price": 170000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6800 XT",
+      "price": 150000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6800",
+      "price": 130000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6750 XT",
+      "price": 95000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6700 XT",
+      "price": 90000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6650 XT",
+      "price": 70000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6600 XT",
+      "price": 60000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6600",
+      "price": 40000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6500 XT",
+      "price": 30000
+    },
+    {
+      "category": "메인보드",
+      "sub": "AMD",
+      "detail": "AM5 / AM4",
+      "name": "라데온 RX6400",
+      "price": 20000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40 / 30 시리즈",
+      "name": "보드 Z790",
+      "price": 55000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40 / 30 시리즈",
+      "name": "보드 Z690",
+      "price": 50000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40 / 30 시리즈",
+      "name": "보드 H770",
+      "price": 40000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40 / 30 시리즈",
+      "name": "보드 H670",
+      "price": 35000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40 / 30 시리즈",
+      "name": "보드 B760",
+      "price": 35000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40 / 30 시리즈",
+      "name": "보드 B660",
+      "price": 30000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40 / 30 시리즈",
+      "name": "보드 H610",
+      "price": 20000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 20 / GTX 16 시리즈",
+      "name": "보드 Z590",
+      "price": 40000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 20 / GTX 16 시리즈",
+      "name": "보드 Z490",
+      "price": 35000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 20 / GTX 16 시리즈",
+      "name": "보드 H570",
+      "price": 23000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 20 / GTX 16 시리즈",
+      "name": "보드 H470",
+      "price": 22000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 20 / GTX 16 시리즈",
+      "name": "보드 B560",
+      "price": 20000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 20 / GTX 16 시리즈",
+      "name": "보드 B460",
+      "price": 17000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 20 / GTX 16 시리즈",
+      "name": "보드 H510",
+      "price": 17000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 20 / GTX 16 시리즈",
+      "name": "보드 H410",
+      "price": 15000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 10 시리즈",
+      "name": "보드 Z390",
+      "price": 25000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 10 시리즈",
+      "name": "보드 Z370",
+      "price": 20000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 10 시리즈",
+      "name": "보드 H370",
+      "price": 15000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 10 시리즈",
+      "name": "보드 B365",
+      "price": 12000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 10 시리즈",
+      "name": "보드 B360",
+      "price": 12000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 10 시리즈",
+      "name": "보드 H310",
+      "price": 10000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 900이하",
+      "name": "보드 Z270",
+      "price": 20000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 900이하",
+      "name": "보드 Z170",
+      "price": 15000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 900이하",
+      "name": "보드 H270",
+      "price": 13000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 900이하",
+      "name": "보드 H170",
+      "price": 12000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 900이하",
+      "name": "보드 B250",
+      "price": 11000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 900이하",
+      "name": "보드 B150",
+      "price": 10000
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "GTX 900이하",
+      "name": "보드 H110",
+      "price": 8000
+    },
+    {
+      "category": "SSD",
+      "sub": "M.2 / SATA",
+      "detail": "전체",
+      "name": "32G DDR4 외산",
+      "price": 80000
+    },
+    {
+      "category": "SSD",
+      "sub": "M.2 / SATA",
+      "detail": "전체",
+      "name": "16G DDR4 외산",
+      "price": 40000
+    },
+    {
+      "category": "SSD",
+      "sub": "M.2 / SATA",
+      "detail": "전체",
+      "name": "8G DDR4 외산",
+      "price": 20000
+    },
+    {
+      "category": "SSD",
+      "sub": "M.2 / SATA",
+      "detail": "전체",
+      "name": "4G DDR4 외산",
+      "price": 6000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "32G DDR5 삼성 (제조 10주차이내)",
+      "price": 550000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "32G DDR5 삼성 44800(5600)",
+      "price": 500000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "32G DDR5 삼성 38400(4800)",
+      "price": 380000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "16G DDR5 삼성 (제조 10주차이내)",
+      "price": 260000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "16G DDR5 삼성 44800(5600)",
+      "price": 220000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "16G DDR5 삼성 38400(4800)",
+      "price": 200000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "8G DDR5 삼성 (제조 10주차이내)",
+      "price": 130000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "8G DDR5 삼성 44800(5600)",
+      "price": 100000
+    },
+    {
+      "category": "HDD",
+      "sub": "3.5인치/2.5인치",
+      "detail": "전체",
+      "name": "8G DDR5 삼성 38400(4800)",
+      "price": 80000
+    }
+  ],
   "prices": {
+    "울트라9 285K": 295000,
+    "울트라9 285": 285000,
+    "울트라7 265K": 195000,
+    "울트라7 265": 185000,
+    "울트라7 265KF": 170000,
+    "울트라7 265F": 160000,
+    "울트라5 245K": 110000,
+    "울트라5 245KF": 100000,
+    "울트라5 235": 85000,
+    "울트라5 225": 75000,
+    "울트라5 225F": 65000,
     "로켓I9 11900k": 280000,
     "로켓I9 11900": 270000,
     "로켓I9 11900KF": 155000,
@@ -18,43 +2250,71 @@
     "로켓I5 11400": 110000,
     "로켓I5 11400F": 80000,
     "로켓I5 11600F": 55000,
-    "린필드I7 880": 400,
-    "린필드I7 875K": 400,
-    "린필드I7 870": 400,
-    "린필드I7 860": 300,
-    "린필드I5 760": 100,
-    "린필드I5 750": 100,
-    "클락데일I5 661": 200,
-    "클락데일I5 660": 200,
-    "클락데일I5 650": 200,
-    "클락데일I3 550": 100,
-    "클락데일I3 540": 100,
-    "클락데일I3 530": 100,
-    "클락데일G6950": 100,
-    "샌디I7 2700K": 23000,
-    "샌디I7 2600K": 23000,
-    "샌디I7 2600": 23000,
-    "샌디I5 2500K": 4000,
-    "샌디I5 2500": 4000,
-    "샌디I5 2400": 4000,
-    "샌디I5 2320": 2000,
-    "샌디I5 2310": 2000,
-    "샌디I5 2300": 2000,
-    "샌디I3 2130": 300,
-    "샌디I3 2120": 300,
-    "샌디I3 2105": 300,
-    "샌디I3 2100": 300,
-    "샌디G870": 200,
-    "샌디G860": 100,
-    "샌디G850": 100,
-    "샌디G840": 100,
-    "샌디G645": 100,
-    "샌디G640": 100,
-    "샌디G630": 100,
-    "샌디G620": 100,
-    "샌디G550": 100,
-    "샌디G540": 100,
-    "샌디G530": 100,
+    "코멧I9 10900K": 350000,
+    "코멧I9 10900KF": 175000,
+    "코멧I9 10900": 400000,
+    "코멧I9 10900F": 170000,
+    "코멧I7 10700K": 220000,
+    "코멧I7 10700KF": 140000,
+    "코멧I7 10700": 160000,
+    "코멧I7 10700F": 135000,
+    "코멧I5 10600K": 100000,
+    "코멧I5 10600KF": 90000,
+    "코멧I5 10600": 100000,
+    "코멧I5 10500": 115000,
+    "코멧I5 10500F": 100000,
+    "코멧I5 10400": 110000,
+    "코멧I5 10400F": 90000,
+    "코멧I3 10100": 80000,
+    "코멧I3 10100F": 50000,
+    "코멧G6400": 18000,
+    "코멧G5900": 12000,
+    "코멧G6405": 18000,
+    "코멧I5 10600F": 65000,
+    "코멧G5905": 12000,
+    "코멧I3 10105F": 50000,
+    "코멧G5925": 12000,
+    "커피I7 8700K": 72000,
+    "커피I7 8700": 72000,
+    "커피I5 8600K": 35000,
+    "커피I5 8600": 35000,
+    "커피I5 8500": 35000,
+    "커피I5 8400": 33000,
+    "커피I3 8350K": 11000,
+    "커피I3 8100": 10000,
+    "커피G5600": 500,
+    "커피G5400": 500,
+    "커피G4920": 300,
+    "커피G4900": 300,
+    "카비I7 7700K": 45000,
+    "카비I7 7700": 37000,
+    "카비I5 7600K": 14000,
+    "카비I5 7600": 14000,
+    "카비I5 7500": 14000,
+    "카비I5 7400": 11000,
+    "카비I3 7350K": 800,
+    "카비I3 7320": 800,
+    "카비I3 7300": 800,
+    "카비I3 7100": 800,
+    "카비G4620": 300,
+    "카비G4600": 300,
+    "카비G4560": 300,
+    "카비G3950": 100,
+    "카비G3930": 100,
+    "스카이I7 6700K": 28000,
+    "스카이I7 6700": 32000,
+    "스카이I5 6600K": 9000,
+    "스카이I5 6600": 9000,
+    "스카이I5 6500": 9000,
+    "스카이I5 6400": 8000,
+    "스카이I3 6320": 700,
+    "스카이I3 6300": 700,
+    "스카이I3 6100": 700,
+    "스카이G4520": 300,
+    "스카이G4500": 300,
+    "스카이G4400": 300,
+    "스카이G3920": 100,
+    "스카이G3900": 100,
     "하스웰I7 4790K": 40000,
     "하스웰I7 4790": 36000,
     "하스웰I7 4770K": 35000,
@@ -91,47 +2351,43 @@
     "하스웰G1840": 100,
     "하스웰G1830": 100,
     "하스웰G1820": 100,
-    "스카이I7 6700K": 28000,
-    "스카이I7 6700": 32000,
-    "스카이I5 6600K": 9000,
-    "스카이I5 6600": 9000,
-    "스카이I5 6500": 9000,
-    "스카이I5 6400": 8000,
-    "스카이I3 6320": 700,
-    "스카이I3 6300": 700,
-    "스카이I3 6100": 700,
-    "스카이G4520": 300,
-    "스카이G4500": 300,
-    "스카이G4400": 300,
-    "스카이G3920": 100,
-    "스카이G3900": 100,
-    "카비I7 7700K": 45000,
-    "카비I7 7700": 37000,
-    "카비I5 7600K": 14000,
-    "카비I5 7600": 14000,
-    "카비I5 7500": 14000,
-    "카비I5 7400": 11000,
-    "카비I3 7350K": 800,
-    "카비I3 7320": 800,
-    "카비I3 7300": 800,
-    "카비I3 7100": 800,
-    "카비G4620": 300,
-    "카비G4600": 300,
-    "카비G4560": 300,
-    "카비G3950": 100,
-    "카비G3930": 100,
-    "커피I7 8700K": 72000,
-    "커피I7 8700": 72000,
-    "커피I5 8600K": 35000,
-    "커피I5 8600": 35000,
-    "커피I5 8500": 35000,
-    "커피I5 8400": 33000,
-    "커피I3 8350K": 11000,
-    "커피I3 8100": 10000,
-    "커피G5600": 500,
-    "커피G5400": 500,
-    "커피G4920": 300,
-    "커피G4900": 300,
+    "샌디I7 2700K": 23000,
+    "샌디I7 2600K": 23000,
+    "샌디I7 2600": 23000,
+    "샌디I5 2500K": 4000,
+    "샌디I5 2500": 4000,
+    "샌디I5 2400": 4000,
+    "샌디I5 2320": 2000,
+    "샌디I5 2310": 2000,
+    "샌디I5 2300": 2000,
+    "샌디I3 2130": 300,
+    "샌디I3 2120": 300,
+    "샌디I3 2105": 300,
+    "샌디I3 2100": 300,
+    "샌디G870": 200,
+    "샌디G860": 100,
+    "샌디G850": 100,
+    "샌디G840": 100,
+    "샌디G645": 100,
+    "샌디G640": 100,
+    "샌디G630": 100,
+    "샌디G620": 100,
+    "샌디G550": 100,
+    "샌디G540": 100,
+    "샌디G530": 100,
+    "린필드I7 880": 400,
+    "린필드I7 875K": 400,
+    "린필드I7 870": 400,
+    "린필드I7 860": 300,
+    "린필드I5 760": 100,
+    "린필드I5 750": 100,
+    "클락데일I5 661": 200,
+    "클락데일I5 660": 200,
+    "클락데일I5 650": 200,
+    "클락데일I3 550": 100,
+    "클락데일I3 540": 100,
+    "클락데일I3 530": 100,
+    "클락데일G6950": 100,
     "커피I9 9900K": 180000,
     "커피I9 9900": 180000,
     "커피I9 9900KF": 140000,
@@ -152,96 +2408,58 @@
     "커피G5620": 500,
     "커피G5420": 500,
     "커피G4930": 300,
-    "코멧I9 10900K": 350000,
-    "코멧I9 10900KF": 175000,
-    "코멧I9 10900": 400000,
-    "코멧I9 10900F": 170000,
-    "코멧I7 10700K": 220000,
-    "코멧I7 10700KF": 140000,
-    "코멧I7 10700": 160000,
-    "코멧I7 10700F": 135000,
-    "코멧I5 10600K": 100000,
-    "코멧I5 10600KF": 90000,
-    "코멧I5 10600": 100000,
-    "코멧I5 10500": 115000,
-    "코멧I5 10500F": 100000,
-    "코멧I5 10400": 110000,
-    "코멧I5 10400F": 90000,
-    "코멧I3 10100": 80000,
-    "코멧I3 10100F": 50000,
-    "코멧G6400": 18000,
-    "코멧G5900": 12000,
-    "코멧G6405": 18000,
-    "코멧I5 10600F": 65000,
-    "코멧G5905": 12000,
-    "코멧I3 10105F": 50000,
-    "코멧G5925": 12000,
-    "엘더I9 12900": 400000,
-    "엘더I9 12900K": 350000,
-    "엘더I9 12900KS": 300000,
-    "엘더I9 12900KF": 250000,
-    "엘더I9 12900F": 250000,
-    "엘더I7 12700": 240000,
-    "엘더I7 12700K": 240000,
-    "엘더I7 12700KF": 180000,
-    "엘더I7 12700F": 180000,
-    "엘더I5 12500": 160000,
-    "엘더I5 12400": 140000,
-    "엘더I5 12600K": 140000,
-    "엘더I5 12600": 140000,
-    "엘더I5 12600KF": 100000,
-    "엘더I5 12400F": 100000,
-    "엘더I3 12100": 90000,
-    "엘더I3 12100F": 70000,
-    "엘더G7400": 70000,
-    "엘더G6900": 45000,
-    "랩터I9 13900KS": 300000,
-    "랩터I9 13900K": 340000,
-    "랩터I9 13900KF": 255000,
-    "랩터I9 13900": 370000,
-    "랩터I9 13900F": 250000,
-    "랩터i7 13700K": 300000,
-    "랩터I7 13700KF": 200000,
-    "랩터I7 13700": 290000,
-    "랩터I7 13700F": 200000,
-    "랩터I5 13600K": 150000,
-    "랩터I5 13600KF": 100000,
-    "랩터I5 13500": 160000,
-    "랩터I5 13400": 140000,
-    "랩터I5 13400F": 100000,
-    "랩터I3 13100": 90000,
-    "랩터I3 13100F": 70000,
-    "랩터I9 14900KS": 300000,
-    "랩터I9 14900K": 400000,
-    "랩터I9 14900": 400000,
-    "랩터I9 14900KF": 310000,
-    "랩터I9 14900F": 300000,
-    "랩터I7 14700K": 300000,
-    "랩터I7 14700KF": 200000,
-    "랩터I7 14700": 270000,
-    "랩터I7 14700F": 200000,
-    "랩터I5 14600K": 160000,
-    "랩터I5 14600KF": 100000,
-    "랩터I5 14500": 200000,
-    "랩터I5 14400": 140000,
-    "랩터I5 14400F": 100000,
-    "랩터I3 14100": 90000,
-    "랩터I3 14100F": 60000,
-    "랩터 인텔 프로세서 300": 50000,
-    "울트라9 285K": 295000,
-    "울트라9 285": 285000,
-    "울트라7 265K": 195000,
-    "울트라7 265": 185000,
-    "울트라7 265KF": 170000,
-    "울트라7 265F": 160000,
-    "울트라5 245K": 110000,
-    "울트라5 245KF": 100000,
-    "울트라5 235": 85000,
-    "울트라5 225": 75000,
-    "울트라5 225F": 65000,
-    "울트라7 270K PLUS": 300000,
-    "울트라5 250K PLUS": 200000,
-    "울트라5 250KF PLUS": 180000,
+    "라이젠9 라파엘7950X3D": 340000,
+    "라이젠9 라파엘7950X": 300000,
+    "라이젠9 라파엘7900X3D": 270000,
+    "라이젠9 라파엘7900X": 200000,
+    "라이젠9 라파엘7900": 140000,
+    "라이젠7 라파엘7800X3D": 210000,
+    "라이젠7 라파엘7700X": 140000,
+    "라이젠7 라파엘7700": 95000,
+    "라이젠5 라파엘7600X": 85000,
+    "라이젠5 라파엘7600": 80000,
+    "라이젠5 라파엘7500F": 60000,
+    "라이젠7 피닉스8700G": 140000,
+    "라이젠5 피닉스8600G": 80000,
+    "라이젠5 피닉스8500G": 50000,
+    "라이젠7 피닉스8700F": 90000,
+    "라이젠5 피닉스8400F": 40000,
+    "라이젠5 라파엘7400F": 50000,
+    "라이젠7 르누아르4750G": 80000,
+    "라이젠5 르누아르4650G": 70000,
+    "라이젠3 르누아르4350G": 55000,
+    "라이젠3 르누아르4100": 20000,
+    "라이젠9 마티스3900X/XT": 90000,
+    "라이젠7 마티스3800X/XT": 70000,
+    "라이젠7 마티스3700X": 65000,
+    "라이젠5 마티스3600X/XT": 42000,
+    "라이젠5 마티스3600": 40000,
+    "라이젠5 마티스3500X": 23000,
+    "라이젠5 피카소3400G": 35000,
+    "라이젠3 피카소3200G": 25000,
+    "라이젠5 마티스3500": 22000,
+    "라이젠3 마티스3300X": 13000,
+    "라이젠3 마티스3100": 12000,
+    "라이젠3 마티스3000G": 2000,
+    "RTX 3090 TI": 650000,
+    "RTX 3090 24G": 600000,
+    "RTX 3080 TI 12G": 330000,
+    "RTX 3080 12GB": 300000,
+    "RTX 3080 10G": 260000,
+    "RTX 3070 TI 8G": 230000,
+    "RTX 3070 8G": 220000,
+    "RTX 3060 TI 8G": 200000,
+    "RTX 3060 12GB": 200000,
+    "RTX 3060 8GB": 150000,
+    "RTX 3050 8GB": 120000,
+    "RTX 3050 6GB": 100000,
+    "RTX2080 TI 11G": 170000,
+    "RTX2080 8G SUPER": 160000,
+    "RTX2080 8G": 150000,
+    "RTX2070 SUPER": 150000,
+    "RTX2070 8G": 140000,
+    "RTX2060 8G SUPER": 135000,
+    "RTX2060 6G(HDMI+DP)": 130000,
     "GTX780 TI": 30000,
     "GTX780": 27000,
     "GTX770": 25000,
@@ -270,46 +2488,6 @@
     "GTX1050 TI": 50000,
     "GTX1050": 40000,
     "GT1030 2G(DVI+HDMI)": 20000,
-    "RTX2080 TI 11G": 170000,
-    "RTX2080 8G SUPER": 160000,
-    "RTX2080 8G": 150000,
-    "RTX2070 SUPER": 150000,
-    "RTX2070 8G": 140000,
-    "RTX2060 8G SUPER": 135000,
-    "RTX2060 6G(HDMI+DP)": 130000,
-    "RTX 3090 TI": 650000,
-    "RTX 3090 24G": 600000,
-    "RTX 3080 TI 12G": 330000,
-    "RTX 3080 12GB": 300000,
-    "RTX 3080 10G": 260000,
-    "RTX 3070 TI 8G": 230000,
-    "RTX 3070 8G": 220000,
-    "RTX 3060 TI 8G": 200000,
-    "RTX 3060 12GB": 200000,
-    "RTX 3060 8GB": 150000,
-    "RTX 3050 8GB": 120000,
-    "RTX 3050 6GB": 100000,
-    "RTX 4090 24GB": 1800000,
-    "RTX 4080 SUPER": 550000,
-    "RTX 4080 16GB": 500000,
-    "RTX 4070 TI SUPER 16G": 360000,
-    "RTX 4070 TI 12G": 320000,
-    "RTX 4070 SUPER": 300000,
-    "RTX 4070 12G": 270000,
-    "RTX 4060 TI 16G": 250000,
-    "RTX 4060 TI 8G": 220000,
-    "RTX 4060 8G": 200000,
-    "ATI RX480 8G": 10000,
-    "ATI RX480 4G": 5000,
-    "ATI RX460": 2000,
-    "ATI RX470 4G": 3000,
-    "ATI RX580 8G": 15000,
-    "ATI RX580 4G": 10000,
-    "ATI RX570 8G": 12000,
-    "ATI RX570 4G": 8000,
-    "ATI RX560 4G": 5000,
-    "ATI RX560 2G": 3000,
-    "ATI RX550 2G": 2000,
     "라데온 RX6950 XT": 230000,
     "라데온 RX6900 XT": 170000,
     "라데온 RX6800 XT": 150000,
@@ -321,31 +2499,13 @@
     "라데온 RX6600": 40000,
     "라데온 RX6500 XT": 30000,
     "라데온 RX6400": 20000,
-    "라데온 RX7900 XTX 24G": 430000,
-    "라데온 RX7900 XT 20G": 280000,
-    "라데온 RX7900 GRE 16G": 260000,
-    "라데온 RX7800 XT 16G": 190000,
-    "라데온 RX7700 XT 12G": 150000,
-    "라데온 RX7600 XT 16G": 110000,
-    "라데온 RX7600 8G": 75000,
-    "라데온 RX9070 XT 16G": 530000,
-    "라데온 RX9070 16G": 350000,
-    "라데온 RX9060 XT 16G": 240000,
-    "라데온 RX9060 XT 8G": 200000,
-    "라데온 RX9060 8G": 130000,
-    "보드 Z270": 20000,
-    "보드 Z170": 15000,
-    "보드 H270": 13000,
-    "보드 H170": 12000,
-    "보드 B250": 11000,
-    "보드 B150": 10000,
-    "보드 H110": 8000,
-    "보드 Z390": 25000,
-    "보드 Z370": 20000,
-    "보드 H370": 15000,
-    "보드 B365": 12000,
-    "보드 B360": 12000,
-    "보드 H310": 10000,
+    "보드 Z790": 55000,
+    "보드 Z690": 50000,
+    "보드 H770": 40000,
+    "보드 H670": 35000,
+    "보드 B760": 35000,
+    "보드 B660": 30000,
+    "보드 H610": 20000,
     "보드 Z590": 40000,
     "보드 Z490": 35000,
     "보드 H570": 23000,
@@ -354,62 +2514,23 @@
     "보드 B460": 17000,
     "보드 H510": 17000,
     "보드 H410": 15000,
-    "보드 Z790": 55000,
-    "보드 Z690": 50000,
-    "보드 H770": 40000,
-    "보드 H670": 35000,
-    "보드 B760": 35000,
-    "보드 B660": 30000,
-    "보드 H610": 20000,
-    "보드 Z890": 65000,
-    "보드 B860": 45000,
-    "보드 H810": 35000,
-    "보드 X570": 35000,
-    "보드 X470": 25000,
-    "보드 B550": 25000,
-    "보드 B450": 20000,
-    "보드 A520": 15000,
-    "보드 X370": 15000,
-    "보드 B350": 15000,
-    "보드 A320": 12000,
-    "보드 X399": 40000,
-    "보드 X670e": 80000,
-    "보드 X670": 60000,
-    "보드 B650e": 50000,
-    "보드 B650": 40000,
-    "보드 A620": 35000,
-    "RTX 5090 32GB": 3500000,
-    "RTX 5080 16G": 800000,
-    "RTX 5070 Ti 16G": 570000,
-    "RTX 5070 12G": 420000,
-    "RTX 5060 TI 16G": 330000,
-    "RTX 5060 TI 8GB": 280000,
-    "RTX 5060 8GB": 250000,
-    "RTX 5050 8GB": 160000,
+    "보드 Z390": 25000,
+    "보드 Z370": 20000,
+    "보드 H370": 15000,
+    "보드 B365": 12000,
+    "보드 B360": 12000,
+    "보드 H310": 10000,
+    "보드 Z270": 20000,
+    "보드 Z170": 15000,
+    "보드 H270": 13000,
+    "보드 H170": 12000,
+    "보드 B250": 11000,
+    "보드 B150": 10000,
+    "보드 H110": 8000,
     "32G DDR4 외산": 80000,
     "16G DDR4 외산": 40000,
     "8G DDR4 외산": 20000,
     "4G DDR4 외산": 6000,
-    "32G DDR5 외산": 230000,
-    "16G DDR5 외산": 130000,
-    "8G DDR5 외산": 55000,
-    "32G DDR4 삼성 25600(3200)": 220000,
-    "32G DDR4 삼성 23400(2933)": 125000,
-    "32G DDR4 삼성 21300(2666)": 160000,
-    "16G DDR4 삼성 25600(3200)": 112000,
-    "16G DDR4 삼성 23400(2933)": 70000,
-    "16G DDR4 삼성 21300(2666)": 75000,
-    "16G DDR4 삼성 19200(2400)": 68000,
-    "16G DDR4 삼성 17000(2133)": 67000,
-    "8G DDR4 삼성 25600(3200)": 40000,
-    "8G DDR4 삼성 23400(2933)": 25000,
-    "8G DDR4 삼성 21300(2666)": 30000,
-    "8G DDR4 삼성 19200(2400)": 27000,
-    "8G DDR4 삼성 17000(2133)": 25000,
-    "4G DDR4 삼성 25600(3200)": 20000,
-    "4G DDR4 삼성 21300(2666)": 14000,
-    "4G DDR4 삼성 19200(2400)": 12500,
-    "4G DDR4 삼성 17000(2133)": 12000,
     "32G DDR5 삼성 (제조 10주차이내)": 550000,
     "32G DDR5 삼성 44800(5600)": 500000,
     "32G DDR5 삼성 38400(4800)": 380000,
@@ -418,180 +2539,6 @@
     "16G DDR5 삼성 38400(4800)": 200000,
     "8G DDR5 삼성 (제조 10주차이내)": 130000,
     "8G DDR5 삼성 44800(5600)": 100000,
-    "8G DDR5 삼성 38400(4800)": 80000,
-    "라이젠7 서밋릿지1800X": 23000,
-    "라이젠7 서밋릿지1700X": 22000,
-    "라이젠7 서밋릿지1700": 22000,
-    "라이젠5 서밋릿지1600X": 9000,
-    "라이젠5 서밋릿지1600": 8000,
-    "라이젠5 서밋릿지1500X": 4000,
-    "라이젠5 서밋릿지1400": 3000,
-    "라이젠3 서밋릿지1300X": 2000,
-    "라이젠3 서밋릿지1200": 2000,
-    "라이젠7 피나클릿지2700X": 37000,
-    "라이젠7 피나클릿지2700": 35000,
-    "라이젠5 피나클릿지2600X": 20000,
-    "라이젠5 피나클릿지2600": 19000,
-    "라이젠5 레이븐릿지2400G": 17000,
-    "라이젠3 레이븐릿지2200G": 9000,
-    "라이젠7 르누아르4750G": 80000,
-    "라이젠5 르누아르4650G": 70000,
-    "라이젠3 르누아르4350G": 55000,
-    "라이젠3 르누아르4100": 20000,
-    "라이젠9 마티스3900X/XT": 90000,
-    "라이젠7 마티스3800X/XT": 70000,
-    "라이젠7 마티스3700X": 65000,
-    "라이젠5 마티스3600X/XT": 42000,
-    "라이젠5 마티스3600": 40000,
-    "라이젠5 마티스3500X": 23000,
-    "라이젠5 피카소3400G": 35000,
-    "라이젠3 피카소3200G": 25000,
-    "라이젠5 마티스3500": 22000,
-    "라이젠3 마티스3300X": 13000,
-    "라이젠3 마티스3100": 12000,
-    "라이젠3 마티스3000G": 2000,
-    "라이젠7 버미어5800X3D": 200000,
-    "라이젠9 버미어5950X": 180000,
-    "라이젠9 버미어5900X": 150000,
-    "라이젠7 버미어5700X3D": 150000,
-    "라이젠7 버미어5800X": 120000,
-    "라이젠7 버미어5700X": 110000,
-    "라이젠5 버미어5600X": 85000,
-    "라이젠5 버미어5600": 80000,
-    "라이젠7 세잔5700G": 75000,
-    "라이젠5 세잔5600G": 70000,
-    "라이젠5 세잔5500G": 50000,
-    "라이젠9 라파엘7950X3D": 340000,
-    "라이젠9 라파엘7950X": 300000,
-    "라이젠9 라파엘7900X3D": 270000,
-    "라이젠9 라파엘7900X": 200000,
-    "라이젠9 라파엘7900": 140000,
-    "라이젠7 라파엘7800X3D": 210000,
-    "라이젠7 라파엘7700X": 140000,
-    "라이젠7 라파엘7700": 95000,
-    "라이젠5 라파엘7600X": 85000,
-    "라이젠5 라파엘7600": 80000,
-    "라이젠5 라파엘7500F": 60000,
-    "라이젠7 피닉스8700G": 140000,
-    "라이젠5 피닉스8600G": 80000,
-    "라이젠5 피닉스8500G": 50000,
-    "라이젠7 피닉스8700F": 90000,
-    "라이젠5 피닉스8400F": 40000,
-    "라이젠5 라파엘7400F": 50000,
-    "라이젠9 그래니트릿지 9950X3D2": 700000,
-    "라이젠9 그래니트릿지 9950X3D": 450000,
-    "라이젠7 그래니트 릿지 9850X3D": 380000,
-    "라이젠9 그래니트 릿지 9950X": 350000,
-    "라이젠9 그래니트 릿지 9900X3D": 330000,
-    "라이젠7 그래니트 릿지 9800X3D": 300000,
-    "라이젠9 그래니트 릿지 9900X": 250000,
-    "라이젠7 그래니트 릿지 9700X": 170000,
-    "라이젠5 그래니트 릿지 9600X": 130000,
-    "라이젠5 그래니트 릿지 9600": 120000,
-    "라이젠5 그래니트 릿지 9500F": 90000,
-    "8G DDR3 삼성 12800": 10000,
-    "8G DDR3 삼성 10600": 9000,
-    "4G DDR3 삼성 12800": 1000,
-    "4G DDR3 삼성 10600": 1000,
-    "4G DDR3 삼성 8500": 1000,
-    "2G DDR3 삼성 12800": 700,
-    "2G DDR3 삼성 10600": 700,
-    "2G DDR3 삼성 8500": 700,
-    "1G DDR3 삼성 10600": 500,
-    "1G DDR3 삼성 8500": 500,
-    "8G DDR3 외산": 2000,
-    "4G DDR3 외산": 400,
-    "2G DDR3 외산": 300,
-    "1G DDR3 외산": 200,
-    "보드 Z77": 2000,
-    "보드 H77": 2000,
-    "보드 B75": 2000,
-    "보드 Z68": 2000,
-    "보드 P67": 2000,
-    "보드 H67": 2000,
-    "보드 H61": 2000,
-    "8TB SSD 삼성 20년이후제품 860시리즈 이상": 400000,
-    "8TB SSD 삼성중고": 200000,
-    "4TB SSD 삼성 20년이후제품 860시리즈 이상": 200000,
-    "4TB SSD 삼성중고": 140000,
-    "4TB SSD": 120000,
-    "2TB SSD 삼성 20년이후제품 860시리즈 이상": 120000,
-    "2TB SSD 삼성중고": 90000,
-    "2TB SSD": 80000,
-    "1TB SSD 삼성 20년이후제품 860시리즈 이상": 70000,
-    "1TB SSD 삼성중고": 60000,
-    "1TB SSD": 50000,
-    "500G SSD 삼성중고": 45000,
-    "500G SSD": 35000,
-    "250G SSD 삼성중고": 25000,
-    "250G SSD": 15000,
-    "120G SSD 삼성중고": 6000,
-    "120G SSD": 4000,
-    "80G SSD": 1500,
-    "64G SSD": 1500,
-    "32G SSD": 1000,
-    "4TB M.2 삼성": 150000,
-    "4TB M.2": 130000,
-    "2TB M.2 삼성": 100000,
-    "2TB M.2": 80000,
-    "1TB M.2 삼성": 60000,
-    "1TB M.2": 50000,
-    "500G M.2 삼성": 45000,
-    "500G M.2": 35000,
-    "250G M.2 삼성": 25000,
-    "250G M.2": 15000,
-    "120G M.2 삼성": 8000,
-    "120G M.2": 5000,
-    "250G M-SATA": 3000,
-    "120G M-SATA": 2000,
-    "64G M-SATA": 1000,
-    "8TB NVMe 삼성 20년이후제품 970시리즈 이상": 600000,
-    "8TB NVME 삼성": 450000,
-    "8TB NVME": 400000,
-    "4TB NVMe 삼성 20년이후제품 970시리즈 이상": 300000,
-    "4TB NVME 삼성": 220000,
-    "4TB NVME": 200000,
-    "2TB NVMe 삼성 20년이후제품 970시리즈 이상": 150000,
-    "2TB NVME 삼성": 120000,
-    "2TB NVME": 100000,
-    "1TB NVMe 삼성 20년이후제품 970시리즈 이상": 80000,
-    "1TB NVME 삼성": 60000,
-    "1TB NVME": 55000,
-    "500G NVME 삼성": 50000,
-    "500G NVME": 40000,
-    "250G NVME 삼성": 30000,
-    "250G NVME": 20000,
-    "120G NVME 삼성": 7000,
-    "120G NVME": 5000,
-    "18TB SATA": 160000,
-    "16TB SATA": 150000,
-    "14TB SATA": 140000,
-    "12TB SATA": 120000,
-    "10TB SATA": 100000,
-    "8TB SATA": 80000,
-    "6TB SATA": 60000,
-    "5TB SATA": 50000,
-    "4TB SATA": 40000,
-    "3TB SATA": 30000,
-    "2TB SATA": 20000,
-    "1.5TB SATA": 10000,
-    "1TB SATA": 12000,
-    "750G SATA": 2000,
-    "640G SATA": 2000,
-    "500G SATA": 2000,
-    "320G SATA": 200,
-    "250G SATA": 200,
-    "160-200G SATA": 200,
-    "80-120G SATA": 200,
-    "2TB 노트북 SATA": 20000,
-    "1.5TB 노트북 SATA": 10000,
-    "1TB 노트북 SATA": 12000,
-    "750G 노트북 SATA": 2000,
-    "640G 노트북 SATA": 2000,
-    "500G 노트북 SATA": 2000,
-    "320G 노트북 SATA": 200,
-    "250G 노트북 SATA": 200,
-    "160G~200G 노트북 SATA": 200,
-    "80-120G 노트북 SATA": 200
+    "8G DDR5 삼성 38400(4800)": 80000
   }
 }
