@@ -32,11 +32,11 @@ updated_at = price_data.get("updated_at", "알 수 없음")
 total_count = price_data.get("count", len(prices_map))
 
 st.caption(
-    f"📅 최근 시세 업데이트: **{updated_at}** (월드메모리 실시간 **{total_count:,}개**"
-    " 부품 연동 중)"
+    f"📅 최근 시세 업데이트: **{updated_at}** (월드메모리 연동 **{total_count:,}개**"
+    " 수집 중)"
 )
 
-# 세션 상태 초기화 (견적서 장바구니)
+# 세션 상태 초기화 (장바구니)
 if "cart" not in st.session_state:
   st.session_state.cart = []
 
@@ -46,19 +46,17 @@ df_items = (
     else pd.DataFrame(columns=["category", "sub", "detail", "name", "price"])
 )
 
-# --- 1. 부품 검색 및 선택 영역 ---
+# --- 1. 부품 검색 및 선택 ---
 st.subheader("1. 부품 검색 및 선택")
 
-# [통합 검색창]
 search_query = st.text_input(
-    "🔍 **전체 품목 검색** (모델명이나 스펙을 입력하세요 ex: 14900, 3070, DDR4"
-    " 16G)",
-    placeholder="검색어를 입력하면 카테고리와 상관없이 전체 시세에서 검색됩니다.",
+    "🔍 **전체 품목 검색** (모델명이나 스펙 입력 ex: 14900, 3070, DDR4 16G)",
+    placeholder="검색어를 입력하면 대분류와 관계없이 전체 부품에서 즉시 검색됩니다.",
 )
 
 st.write("")
 
-# 지정해주신 7가지 대분류
+# 대분류
 FIXED_CATEGORIES = [
     "CPU",
     "메인보드",
@@ -69,24 +67,54 @@ FIXED_CATEGORIES = [
     "파워",
 ]
 
+# 화면 노출용 세대/소켓 우선 정렬 순서
+ORDERED_DETAILS = [
+    "1세대",
+    "2세대",
+    "3세대",
+    "4세대",
+    "6세대",
+    "7세대",
+    "8세대",
+    "9세대",
+    "10세대",
+    "11세대",
+    "12세대",
+    "13세대",
+    "14세대",
+    "15세대",
+    "16세대",
+    "AM5",
+    "AM4",
+    "라이젠 이전/구형",
+]
+
 if search_query.strip():
-  # 검색어가 입력된 경우: 전체 데이터에서 검색 결과 표출
   st.markdown(f"#### 🔎 **'{search_query}'** 전체 검색 결과")
   df_filtered = df_items[
       df_items["name"].str.contains(search_query, case=False, na=False)
   ]
 else:
-  # 검색어가 없는 경우: 7가지 대분류 탭 -> 세대/소켓 라디오 선택 방식
+  # 1) 품목 대분류 선택
   selected_cat = st.radio("【 품목 대분류 】", FIXED_CATEGORIES, horizontal=True)
 
   df_cat = df_items[df_items["category"] == selected_cat]
 
-  # 세부 분류(세대 / 소켓 / 스펙) 추출
-  details = list(df_cat["detail"].unique()) if not df_cat.empty else []
+  # 2) 선택된 대분류에 해당하는 중분류(detail)만 추출 후 정렬
+  raw_details = list(df_cat["detail"].unique()) if not df_cat.empty else []
 
-  if details:
+  # 정의한 순서(ORDERED_DETAILS)대로 정렬, 없는 항목은 뒤로 배치
+  sorted_details = sorted(
+      raw_details,
+      key=lambda x: (
+          ORDERED_DETAILS.index(x) if x in ORDERED_DETAILS else 999,
+          x,
+      ),
+  )
+
+  if sorted_details:
     selected_detail = st.radio(
-        "【 세대 / 소켓 / 세부구분 】", details, horizontal=True
+        "【 세대 / 소켓 / 세부구분 】", sorted_details, horizontal=True
     )
     df_filtered = df_cat[df_cat["detail"] == selected_detail]
   else:
@@ -96,7 +124,6 @@ else:
 if not df_filtered.empty:
   st.markdown("---")
 
-  # 테이블 헤더
   h_col1, h_col2, h_col3, h_col4, h_col5 = st.columns([1.5, 4.5, 2, 1.5, 1.5])
   with h_col1:
     st.markdown("**분류**")
@@ -111,12 +138,11 @@ if not df_filtered.empty:
 
   st.markdown("---")
 
-  # 테이블 리스트 출력
   for idx, row in df_filtered.iterrows():
     col1, col2, col3, col4, col5 = st.columns([1.5, 4.5, 2, 1.5, 1.5])
 
     with col1:
-      st.write(f"[{row.get('detail', row.get('category', '일반'))}]")
+      st.write(f"[{row.get('detail', '일반')}]")
     with col2:
       st.write(f"**{row['name']}**")
     with col3:
@@ -139,15 +165,14 @@ if not df_filtered.empty:
             "수량": qty,
             "금액": row["price"] * qty,
         })
-        st.toast(f"'{row['name']}' 항목이 추가되었습니다!", icon="✅")
+        st.toast(f"'{row['name']}' 추가 완료!", icon="✅")
         st.rerun()
-
 else:
-  st.info("검색 조건에 맞는 부품이 없습니다.")
+  st.info("해당 카테고리에 등록된 부품 시세 데이터가 없습니다.")
 
 st.divider()
 
-# --- 3. 하단 매입 계산 내역 및 총 금액 ---
+# --- 3. 하단 매입 계산 내역 ---
 st.subheader("2. 매입 계산 내역")
 
 if not st.session_state.cart:
@@ -178,7 +203,6 @@ else:
       hide_index=True,
   )
 
-  # 수량 변경 시 금액 반영
   edited_df["금액"] = edited_df["단가"] * edited_df["수량"]
   st.session_state.cart = edited_df.to_dict("records")
 
