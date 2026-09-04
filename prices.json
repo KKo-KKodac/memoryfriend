@@ -1,6 +1,351 @@
 {
-  "updated_at": "2026-09-04 23:43:45 KST",
-  "count": 0,
-  "items": [],
-  "prices": {}
+  "updated_at": "2026-09-04 23:48:25 KST",
+  "count": 48,
+  "items": [
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "16세대",
+      "name": "[ 애플워치 10세대 ]",
+      "price": 10000100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "16세대",
+      "name": "[ 애플워치 10세대 ]",
+      "price": 1046
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "16세대",
+      "name": "[ 애플워치 10세대 ]",
+      "price": 1042
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "16세대",
+      "name": "[ 애플워치 10세대 ]",
+      "price": 1046
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "16세대",
+      "name": "[ 애플워치 10세대 ]",
+      "price": 1042
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "15세대",
+      "name": "[ 애플워치 9세대 ]",
+      "price": 10000100000
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "15세대",
+      "name": "[ 애플워치 9세대 ]",
+      "price": 945
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "15세대",
+      "name": "[ 애플워치 9세대 ]",
+      "price": 941
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "15세대",
+      "name": "[ 애플워치 9세대 ]",
+      "price": 945
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "15세대",
+      "name": "[ 애플워치 9세대 ]",
+      "price": 941
+    },
+    {
+      "category": "CPU",
+      "sub": "INTEL",
+      "detail": "14세대",
+      "name": "[ IBM ]",
+      "price": 1057923233
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 9995032
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 999503
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 798503
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 99950
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 999003
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 798003
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 99900
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 79700
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 59600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 59600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM5)",
+      "name": "[ 6세대 ]",
+      "price": 59500
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 758003
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 95950
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 95900
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 757003
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 75800
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 75700
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 55600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 55600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 75700
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 55600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 4세대 ]",
+      "price": 55500
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 2세대 ]",
+      "price": 72700
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 2세대 ]",
+      "price": 72700
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 2세대 ]",
+      "price": 52600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 2세대 ]",
+      "price": 52600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 2세대 ]",
+      "price": 52400
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 2세대 ]",
+      "price": 32200
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 71800
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 71700
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 71700
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 51600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 51600
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 51500
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 51400
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 31300
+    },
+    {
+      "category": "CPU",
+      "sub": "AMD",
+      "detail": "AMD(AM4)",
+      "name": "[ 1세대 ]",
+      "price": 31200
+    }
+  ],
+  "prices": {
+    "[ 애플워치 10세대 ]": 1042,
+    "[ 애플워치 9세대 ]": 941,
+    "[ IBM ]": 1057923233,
+    "[ 6세대 ]": 59500,
+    "[ 4세대 ]": 55500,
+    "[ 2세대 ]": 32200,
+    "[ 1세대 ]": 31200
+  }
 }
