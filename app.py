@@ -7,7 +7,7 @@ st.set_page_config(page_title="중고 PC 매입 가액 계산기", layout="wide"
 
 
 # 1. 시세 데이터 로드
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=60)
 def load_price_data():
   if os.path.exists("prices.json"):
     with open("prices.json", "r", encoding="utf-8") as f:
@@ -67,7 +67,7 @@ FIXED_CATEGORIES = [
     "파워",
 ]
 
-# 화면 노출용 세대/소켓 정렬 순서 (최신 16세대부터 1세대 역순 정렬)
+# 화면 노출용 세대/소켓 정렬 순서 (인텔 최신순 -> AMD 순)
 ORDERED_DETAILS = [
     "16세대",
     "15세대",
@@ -84,6 +84,8 @@ ORDERED_DETAILS = [
     "3세대",
     "2세대",
     "1세대",
+    "AMD(AM5)",
+    "AMD(AM4)",
     "AM5",
     "AM4",
     "라이젠 이전/구형",
@@ -103,7 +105,7 @@ else:
   # 2) 선택된 대분류에 해당하는 중분류(detail) 추출
   raw_details = list(df_cat["detail"].unique()) if not df_cat.empty else []
 
-  # 정의한 최신순(ORDERED_DETAILS)대로 정렬
+  # 정의한 순서(ORDERED_DETAILS)대로 정렬
   sorted_details = sorted(
       raw_details,
       key=lambda x: (
