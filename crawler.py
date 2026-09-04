@@ -9,8 +9,6 @@ KST = timezone(timedelta(hours=9))
 
 URL_CONFIG = [
     # === CPU (INTEL) ===
-    {"category": "CPU", "sub": "INTEL", "detail": "16세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4241"},
-    {"category": "CPU", "sub": "INTEL", "detail": "15세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4240"},
     {"category": "CPU", "sub": "INTEL", "detail": "14세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4233"},
     {"category": "CPU", "sub": "INTEL", "detail": "13세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4195"},
     {"category": "CPU", "sub": "INTEL", "detail": "12세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4156"},
@@ -28,11 +26,9 @@ URL_CONFIG = [
     # === CPU (AMD) ===
     {"category": "CPU", "sub": "AMD", "detail": "AMD(AM5)", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4197"},
     {"category": "CPU", "sub": "AMD", "detail": "AMD(AM4)", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4072"},
-    {"category": "CPU", "sub": "AMD", "detail": "AMD(AM4)", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3945"},
-    {"category": "CPU", "sub": "AMD", "detail": "AMD(AM4)", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3943"},
 
     # === 메인보드 ===
-    {"category": "메인보드", "sub": "INTEL", "detail": "소켓1851/1700", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=4157"},
+    {"category": "메인보드", "sub": "INTEL", "detail": "소켓1700", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=4157"},
     {"category": "메인보드", "sub": "INTEL", "detail": "소켓1200", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=4073"},
     {"category": "메인보드", "sub": "INTEL", "detail": "소켓1151v2/1151", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=3975"},
     {"category": "메인보드", "sub": "INTEL", "detail": "소켓1150/1155", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=3947"},
@@ -85,6 +81,9 @@ def fetch_prices():
         )
     }
 
+    # 키워드 기반 차단 리스트 (스마트워치, 애플워치, 갤럭시워치 등 제거)
+    EXCLUDE_KEYWORDS = ["애플워치", "Apple Watch", "워치", "갤럭시탭", "아이패드", "스마트폰"]
+
     for config in URL_CONFIG:
         category = config["category"]
         sub = config["sub"]
@@ -97,27 +96,37 @@ def fetch_prices():
 
             soup = bs4.BeautifulSoup(response.text, "html.parser")
             
-            # 테이블 행(tr) 탐색
-            rows = soup.find_all("tr")
+            # 본문 단가표 테이블만 정확히 타겟팅
+            target_tables = soup.select("table.tb_type01, table.board_list, .price_table table")
+            if not target_tables:
+                target_tables = soup.find_all("table")
 
-            for row in rows:
-                cols = row.find_all("td")
-                if len(cols) >= 2:
-                    name = clean_text(cols[0].text)
-                    price_text = clean_text(cols[1].text)
-                    price = parse_price(price_text)
+            for table in target_tables:
+                rows = table.find_all("tr")
+                for row in rows:
+                    cols = row.find_all(["td", "th"])
+                    if len(cols) >= 2:
+                        name = clean_text(cols[0].text)
+                        price_text = clean_text(cols[1].text)
+                        price = parse_price(price_text)
 
-                    # 헤더 행 및 불필요 항목 통과
-                    if name and price > 0 and "품명" not in name and "상품명" not in name:
-                        item = {
-                            "category": category,
-                            "sub": sub,
-                            "detail": detail,
-                            "name": name,
-                            "price": price,
-                        }
-                        all_items.append(item)
-                        prices_map[name] = price
+                        # PC 부품이 아닌 불필요 품목 필터링
+                        if any(kw in name for kw in EXCLUDE_KEYWORDS):
+                            continue
+
+                        # 유효성 검사 (가격이 있고 헤더 행이 아닌 경우)
+                        if name and price > 0 and "품명" not in name and "상품명" not in name and "단가" not in name:
+                            # 중복 등록 방지
+                            if name not in prices_map:
+                                item = {
+                                    "category": category,
+                                    "sub": sub,
+                                    "detail": detail,
+                                    "name": name,
+                                    "price": price,
+                                }
+                                all_items.append(item)
+                                prices_map[name] = price
 
         except Exception as e:
             print(f"Error fetching {url}: {e}")
