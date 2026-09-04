@@ -197,20 +197,27 @@ def fetch_prices():
 
     try:
       response = requests.get(url, headers=headers, timeout=15)
-      response.raise_for_encoding()
       response.encoding = "utf-8"
 
       soup = bs4.BeautifulSoup(response.text, "html.parser")
-      rows = soup.select("table.tb_type01 tbody tr, table tbody tr")
+
+      # 페이지 내의 모든 테이블 행(tr) 탐색
+      rows = soup.find_all("tr")
 
       for row in rows:
-        cols = row.select("td")
+        cols = row.find_all("td")
         if len(cols) >= 2:
           name = clean_text(cols[0].text)
           price_text = clean_text(cols[1].text)
           price = parse_price(price_text)
 
-          if name and price > 0:
+          # 헤더 행이나 의미없는 문구 제외
+          if (
+              name
+              and price > 0
+              and "품명" not in name
+              and "상품명" not in name
+          ):
             item = {
                 "category": category,
                 "sub": sub,
