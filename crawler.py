@@ -128,30 +128,41 @@ URL_CONFIG = [
             "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=4304"
         ),
     },
-    # --- CPU (AMD) ---
+    # === CPU (AMD) ===
     {
-        "cat": "CPU",
+        "category": "CPU",
         "sub": "AMD",
-        "detail": "AM5",
+        "detail": "AMD(AM5)",
         "url": (
             "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4197"
         ),
     },
+    # 아래 3개 URL은 모두 "AMD(AM4)" 태그를 동일하게 부여하여 하나의 중분류로 합침
     {
-        "cat": "CPU",
+        "category": "CPU",
         "sub": "AMD",
-        "detail": "AM4",
+        "detail": "AMD(AM4)",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4072"
+        ),
+    },
+    {
+        "category": "CPU",
+        "sub": "AMD",
+        "detail": "AMD(AM4)",
         "url": (
             "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3945"
         ),
     },
     {
-        "cat": "CPU",
+        "category": "CPU",
         "sub": "AMD",
-        "detail": "라이젠 이전/구형",
+        "detail": "AMD(AM4)",
         "url": (
-            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=30"
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3943"
         ),
+    },
+    },
     },
     # --- 메인보드 ---
     {
