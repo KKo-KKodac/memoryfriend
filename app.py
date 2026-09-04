@@ -67,8 +67,9 @@ FIXED_CATEGORIES = [
     "파워",
 ]
 
-# 화면 노출용 세대/소켓 정렬 순서 (인텔 최신순 -> AMD 순)
+# 화면 노출용 세대/소켓 정렬 순서
 ORDERED_DETAILS = [
+    "전체",
     "16세대",
     "15세대",
     "14세대",
@@ -88,7 +89,6 @@ ORDERED_DETAILS = [
     "AMD(AM4)",
     "AM5",
     "AM4",
-    "라이젠 이전/구형",
 ]
 
 if search_query.strip():
@@ -102,23 +102,34 @@ else:
 
   df_cat = df_items[df_items["category"] == selected_cat]
 
-  # 2) 선택된 대분류에 해당하는 중분류(detail) 추출
-  raw_details = list(df_cat["detail"].unique()) if not df_cat.empty else []
-
-  # 정의한 순서(ORDERED_DETAILS)대로 정렬
-  sorted_details = sorted(
-      raw_details,
-      key=lambda x: (
-          ORDERED_DETAILS.index(x) if x in ORDERED_DETAILS else 999,
-          x,
-      ),
+  # 2) 선택된 대분류에 해당하는 세부구분(detail) 추출
+  raw_details = (
+      [d for d in df_cat["detail"].unique() if d] if not df_cat.empty else []
   )
 
-  if sorted_details:
-    selected_detail = st.radio(
-        "【 세대 / 소켓 / 세부구분 】", sorted_details, horizontal=True
+  if raw_details:
+    # 정렬 순서에 맞춰 나열
+    sorted_details = sorted(
+        raw_details,
+        key=lambda x: (
+            ORDERED_DETAILS.index(x) if x in ORDERED_DETAILS else 999,
+            x,
+        ),
     )
-    df_filtered = df_cat[df_cat["detail"] == selected_detail]
+    # 선택 메뉴에 '전체' 옵션 제공
+    detail_options = ["전체"] + sorted_details
+
+    selected_detail = st.radio(
+        "【 세대 / 소켓 / 세부구분 】",
+        detail_options,
+        horizontal=True,
+        key=f"detail_radio_{selected_cat}",
+    )
+
+    if selected_detail == "전체":
+      df_filtered = df_cat
+    else:
+      df_filtered = df_cat[df_cat["detail"] == selected_detail]
   else:
     df_filtered = df_cat
 
