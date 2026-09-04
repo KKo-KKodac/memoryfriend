@@ -1,150 +1,407 @@
+import datetime
 import json
 import re
-from datetime import datetime, timezone, timedelta
-import bs4
+import time
 import requests
+from bs4 import BeautifulSoup
 
-# 한국 표준시 (KST) 설정
-KST = timezone(timedelta(hours=9))
-
+# 세부 매핑 구조 (제공해주신 CPU 1세대~16세대 정확 반영)
 URL_CONFIG = [
-    # === CPU (INTEL) ===
-    {"category": "CPU", "sub": "INTEL", "detail": "14세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4233"},
-    {"category": "CPU", "sub": "INTEL", "detail": "13세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4195"},
-    {"category": "CPU", "sub": "INTEL", "detail": "12세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4156"},
-    {"category": "CPU", "sub": "INTEL", "detail": "11세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4106"},
-    {"category": "CPU", "sub": "INTEL", "detail": "10세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4071"},
-    {"category": "CPU", "sub": "INTEL", "detail": "9세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4013"},
-    {"category": "CPU", "sub": "INTEL", "detail": "8세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3973"},
-    {"category": "CPU", "sub": "INTEL", "detail": "7세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3941"},
-    {"category": "CPU", "sub": "INTEL", "detail": "6세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3940"},
-    {"category": "CPU", "sub": "INTEL", "detail": "4세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3939"},
-    {"category": "CPU", "sub": "INTEL", "detail": "3세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3938"},
-    {"category": "CPU", "sub": "INTEL", "detail": "2세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3937"},
-    {"category": "CPU", "sub": "INTEL", "detail": "1세대", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3936"},
-
-    # === CPU (AMD) ===
-    {"category": "CPU", "sub": "AMD", "detail": "AMD(AM5)", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4197"},
-    {"category": "CPU", "sub": "AMD", "detail": "AMD(AM4)", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4072"},
-
-    # === 메인보드 ===
-    {"category": "메인보드", "sub": "INTEL", "detail": "소켓1700", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=4157"},
-    {"category": "메인보드", "sub": "INTEL", "detail": "소켓1200", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=4073"},
-    {"category": "메인보드", "sub": "INTEL", "detail": "소켓1151v2/1151", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=3975"},
-    {"category": "메인보드", "sub": "INTEL", "detail": "소켓1150/1155", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=3947"},
-    {"category": "메인보드", "sub": "AMD", "detail": "AM5/AM4", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=25&ctgry_no3=3949"},
-
-    # === 메모리 ===
-    {"category": "메모리", "sub": "RAM", "detail": "DDR5", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=26&ctgry_no3=4158"},
-    {"category": "메모리", "sub": "RAM", "detail": "DDR4", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=26&ctgry_no3=3950"},
-    {"category": "메모리", "sub": "RAM", "detail": "DDR3", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=26&ctgry_no3=3951"},
-
-    # === SSD ===
-    {"category": "SSD", "sub": "SSD", "detail": "M.2(NVMe)", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=29&ctgry_no3=4015"},
-    {"category": "SSD", "sub": "SSD", "detail": "SATA 2.5인치", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=29&ctgry_no3=3958"},
-
-    # === HDD ===
-    {"category": "HDD", "sub": "HDD", "detail": "3.5인치(PC용)", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=28&ctgry_no3=3955"},
-
-    # === 그래픽카드 ===
-    {"category": "그래픽카드", "sub": "NVIDIA", "detail": "RTX 40시리즈", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=27&ctgry_no3=4218"},
-    {"category": "그래픽카드", "sub": "NVIDIA", "detail": "RTX 30시리즈", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=27&ctgry_no3=4108"},
-    {"category": "그래픽카드", "sub": "NVIDIA", "detail": "RTX 20시리즈", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=27&ctgry_no3=3980"},
-    {"category": "그래픽카드", "sub": "NVIDIA", "detail": "GTX 16/10/900시리즈", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=27&ctgry_no3=3953"},
-
-    # === 파워 ===
-    {"category": "파워", "sub": "POWER", "detail": "ATX 파워", "url": "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=30&ctgry_no3=3961"},
+    # --- CPU (인텔 세대별 매핑) ---
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "1세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=31"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "2세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=993"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "3세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=1188"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "4세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=1684"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "6세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=3682"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "7세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=3838"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "8세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=3918"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "9세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=25"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "10세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=4020"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "11세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=4083"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "12세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=4089"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "13세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=4137"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "14세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=4144"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "15세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=4303"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "INTEL",
+        "detail": "16세대",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=9&ctgry_no3=4304"
+        ),
+    },
+    # --- CPU (AMD) ---
+    {
+        "cat": "CPU",
+        "sub": "AMD",
+        "detail": "AM5",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=4197"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "AMD",
+        "detail": "AM4",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=3945"
+        ),
+    },
+    {
+        "cat": "CPU",
+        "sub": "AMD",
+        "detail": "라이젠 이전/구형",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=8&ctgry_no2=24&ctgry_no3=30"
+        ),
+    },
+    # --- 메인보드 ---
+    {
+        "cat": "메인보드",
+        "sub": "INTEL",
+        "detail": "LGA1700 (12~14세대)",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=14&ctgry_no2=58&ctgry_no3=4075"
+        ),
+    },
+    {
+        "cat": "메인보드",
+        "sub": "INTEL",
+        "detail": "LGA1200 (10~11세대)",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=14&ctgry_no2=58&ctgry_no3=3808"
+        ),
+    },
+    {
+        "cat": "메인보드",
+        "sub": "INTEL",
+        "detail": "LGA1151v2 (8~9세대)",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=14&ctgry_no2=58&ctgry_no3=3784"
+        ),
+    },
+    {
+        "cat": "메인보드",
+        "sub": "INTEL",
+        "detail": "LGA1151 (6~7세대)",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=14&ctgry_no2=58&ctgry_no3=3775"
+        ),
+    },
+    {
+        "cat": "메인보드",
+        "sub": "INTEL",
+        "detail": "LGA1150 (4세대)",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=14&ctgry_no2=58&ctgry_no3=3768"
+        ),
+    },
+    {
+        "cat": "메인보드",
+        "sub": "AMD",
+        "detail": "AM5 메인보드",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=14&ctgry_no2=59&ctgry_no3=4218"
+        ),
+    },
+    {
+        "cat": "메인보드",
+        "sub": "AMD",
+        "detail": "AM4 메인보드",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=14&ctgry_no2=59&ctgry_no3=4085"
+        ),
+    },
+    # --- 메모리 ---
+    {
+        "cat": "메모리",
+        "sub": "삼성/일반",
+        "detail": "DDR5",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=10&ctgry_no2=966&ctgry_no3=4220"
+        ),
+    },
+    {
+        "cat": "메모리",
+        "sub": "삼성/일반",
+        "detail": "DDR4",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=10&ctgry_no2=966&ctgry_no3=967"
+        ),
+    },
+    {
+        "cat": "메모리",
+        "sub": "삼성/일반",
+        "detail": "DDR3",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=10&ctgry_no2=966&ctgry_no3=4221"
+        ),
+    },
+    {
+        "cat": "메모리",
+        "sub": "노트북용",
+        "detail": "노트북 메모리",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=10&ctgry_no2=57"
+        ),
+    },
+    # --- 그래픽카드 ---
+    {
+        "cat": "그래픽카드",
+        "sub": "NVIDIA",
+        "detail": "RTX 40 시리즈",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=12&ctgry_no2=42&ctgry_no3=4305"
+        ),
+    },
+    {
+        "cat": "그래픽카드",
+        "sub": "NVIDIA",
+        "detail": "RTX 30 시리즈",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=12&ctgry_no2=42&ctgry_no3=4090"
+        ),
+    },
+    {
+        "cat": "그래픽카드",
+        "sub": "NVIDIA",
+        "detail": "RTX 20 / GTX 16 시리즈",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=12&ctgry_no2=42&ctgry_no3=4021"
+        ),
+    },
+    {
+        "cat": "그래픽카드",
+        "sub": "NVIDIA",
+        "detail": "GTX 10 시리즈",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=12&ctgry_no2=42&ctgry_no3=3932"
+        ),
+    },
+    {
+        "cat": "그래픽카드",
+        "sub": "AMD",
+        "detail": "라데온 시리즈",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=12&ctgry_no2=4026&ctgry_no3=4029"
+        ),
+    },
+    # --- SSD / HDD ---
+    {
+        "cat": "SSD",
+        "sub": "M.2",
+        "detail": "NVMe / M.2 SSD",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=1&ctgry_no2=2&ctgry_no3=3866"
+        ),
+    },
+    {
+        "cat": "SSD",
+        "sub": "SATA",
+        "detail": "2.5인치 SATA SSD",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=1&ctgry_no2=2&ctgry_no3=4141"
+        ),
+    },
+    {
+        "cat": "HDD",
+        "sub": "3.5인치",
+        "detail": "데스크탑 HDD",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=1&ctgry_no2=2&ctgry_no3=7"
+        ),
+    },
+    {
+        "cat": "HDD",
+        "sub": "2.5인치",
+        "detail": "노트북 HDD",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=1&ctgry_no2=2&ctgry_no3=5"
+        ),
+    },
+    # --- 파워 ---
+    {
+        "cat": "파워",
+        "sub": "일반파워",
+        "detail": "500W 이하",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=4273&ctgry_no2=4274"
+        ),
+    },
+    {
+        "cat": "파워",
+        "sub": "일반파워",
+        "detail": "600W~700W",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=4273&ctgry_no2=4275"
+        ),
+    },
+    {
+        "cat": "파워",
+        "sub": "일반파워",
+        "detail": "750W 이상",
+        "url": (
+            "https://www.worldmemory.co.kr/price/computer.do?ctgry_no1=4273&ctgry_no2=4276"
+        ),
+    },
 ]
 
 
-def clean_text(text):
-    if not text:
-        return ""
-    return re.sub(r"\s+", " ", text).strip()
+def crawl_worldmemory():
+  headers = {
+      "User-Agent": (
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+          " (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      )
+  }
 
+  items = []
+  prices_map = {}
 
-def parse_price(price_str):
-    if not price_str:
-        return 0
-    num = re.sub(r"[^\d]", "", price_str)
-    return int(num) if num else 0
+  for cfg in URL_CONFIG:
+    try:
+      response = requests.get(cfg["url"], headers=headers, timeout=10)
+      response.encoding = "utf-8"
+      soup = BeautifulSoup(response.text, "html.parser")
 
+      rows = soup.select("table tr")
+      for row in rows:
+        cols = row.select("td, th")
+        texts = [c.get_text(strip=True) for c in cols]
 
-def fetch_prices():
-    all_items = []
-    prices_map = {}
+        if len(texts) >= 3:
+          item_name = texts[1]
+          price_str = texts[2]
+          cleaned_price = re.sub(r"[^\d]", "", price_str)
 
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-            " (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
-    }
+          if cleaned_price.isdigit():
+            price_num = int(cleaned_price)
+            if price_num > 0 and len(item_name) > 1:
+              items.append({
+                  "category": cfg["cat"],
+                  "sub": cfg["sub"],
+                  "detail": cfg["detail"],
+                  "name": item_name,
+                  "price": price_num,
+              })
+              prices_map[item_name] = price_num
+      time.sleep(0.05)
+    except Exception as e:
+      print(f"Error crawling {cfg['url']}: {e}")
 
-    # 키워드 기반 차단 리스트 (스마트워치, 애플워치, 갤럭시워치 등 제거)
-    EXCLUDE_KEYWORDS = ["애플워치", "Apple Watch", "워치", "갤럭시탭", "아이패드", "스마트폰"]
+  now = datetime.datetime.utcnow() + datetime.timedelta(hours=9)
+  formatted_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
-    for config in URL_CONFIG:
-        category = config["category"]
-        sub = config["sub"]
-        detail = config["detail"]
-        url = config["url"]
+  data = {
+      "updated_at": formatted_time,
+      "count": len(items),
+      "items": items,
+      "prices": prices_map,
+  }
 
-        try:
-            response = requests.get(url, headers=headers, timeout=15)
-            response.encoding = "utf-8"
+  with open("prices.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
 
-            soup = bs4.BeautifulSoup(response.text, "html.parser")
-            
-            # 본문 단가표 테이블만 정확히 타겟팅
-            target_tables = soup.select("table.tb_type01, table.board_list, .price_table table")
-            if not target_tables:
-                target_tables = soup.find_all("table")
-
-            for table in target_tables:
-                rows = table.find_all("tr")
-                for row in rows:
-                    cols = row.find_all(["td", "th"])
-                    if len(cols) >= 2:
-                        name = clean_text(cols[0].text)
-                        price_text = clean_text(cols[1].text)
-                        price = parse_price(price_text)
-
-                        # PC 부품이 아닌 불필요 품목 필터링
-                        if any(kw in name for kw in EXCLUDE_KEYWORDS):
-                            continue
-
-                        # 유효성 검사 (가격이 있고 헤더 행이 아닌 경우)
-                        if name and price > 0 and "품명" not in name and "상품명" not in name and "단가" not in name:
-                            # 중복 등록 방지
-                            if name not in prices_map:
-                                item = {
-                                    "category": category,
-                                    "sub": sub,
-                                    "detail": detail,
-                                    "name": name,
-                                    "price": price,
-                                }
-                                all_items.append(item)
-                                prices_map[name] = price
-
-        except Exception as e:
-            print(f"Error fetching {url}: {e}")
-
-    now_str = datetime.now(KST).strftime("%Y-%m-%d %H:%M:%S KST")
-
-    result = {
-        "updated_at": now_str,
-        "count": len(all_items),
-        "items": all_items,
-        "prices": prices_map,
-    }
-
-    with open("prices.json", "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-
-    print(f"Successfully saved {len(all_items)} items to prices.json")
+  print(f"[{formatted_time}] 완료 - 총 {len(items)}개 정밀 매핑 완료!")
 
 
 if __name__ == "__main__":
-    fetch_prices()
+  crawl_worldmemory()
