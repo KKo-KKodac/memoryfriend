@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-04 23:48:25 KST",
-  "count": 48,
+  "updated_at": "2026-09-04 23:51:56 KST",
+  "count": 61,
   "items": [
     {
       "category": "CPU",
@@ -337,6 +337,97 @@
       "detail": "AMD(AM4)",
       "name": "[ 1세대 ]",
       "price": 31200
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "소켓1200",
+      "name": "[ 2020 ]",
+      "price": 310
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "소켓1200",
+      "name": "[ 2020 ]",
+      "price": 520
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "소켓1200",
+      "name": "[ 2020 ]",
+      "price": 530
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "소켓1200",
+      "name": "[ 2020 ]",
+      "price": 20202727381085125500
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "소켓1200",
+      "name": "[ 2020 ]",
+      "price": 2020272533101060085125300
+    },
+    {
+      "category": "메인보드",
+      "sub": "INTEL",
+      "detail": "소켓1200",
+      "name": "[ 2020 ]",
+      "price": 2020272531101050082565300
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40시리즈",
+      "name": "[ ​9000시리즈﻿ ]",
+      "price": 1057923233
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40시리즈",
+      "name": "[ ​9000시리즈﻿ ]",
+      "price": 1057923233
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40시리즈",
+      "name": "[ ​9000시리즈﻿ ]",
+      "price": 907016
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40시리즈",
+      "name": "[ ​9000시리즈﻿ ]",
+      "price": 907016
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40시리즈",
+      "name": "[ ​9000시리즈﻿ ]",
+      "price": 906016
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40시리즈",
+      "name": "[ ​9000시리즈﻿ ]",
+      "price": 90608
+    },
+    {
+      "category": "그래픽카드",
+      "sub": "NVIDIA",
+      "detail": "RTX 40시리즈",
+      "name": "[ ​9000시리즈﻿ ]",
+      "price": 90608
     }
   ],
   "prices": {
@@ -346,6 +437,8 @@
     "[ 6세대 ]": 59500,
     "[ 4세대 ]": 55500,
     "[ 2세대 ]": 32200,
-    "[ 1세대 ]": 31200
+    "[ 1세대 ]": 31200,
+    "[ 2020 ]": 2020272531101050082565300,
+    "[ ​9000시리즈﻿ ]": 90608
   }
 }
