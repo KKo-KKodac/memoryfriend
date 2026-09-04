@@ -67,23 +67,23 @@ FIXED_CATEGORIES = [
     "파워",
 ]
 
-# 화면 노출용 세대/소켓 우선 정렬 순서
+# 화면 노출용 세대/소켓 정렬 순서 (최신 16세대부터 1세대 역순 정렬)
 ORDERED_DETAILS = [
-    "1세대",
-    "2세대",
-    "3세대",
-    "4세대",
-    "6세대",
-    "7세대",
-    "8세대",
-    "9세대",
-    "10세대",
-    "11세대",
-    "12세대",
-    "13세대",
-    "14세대",
-    "15세대",
     "16세대",
+    "15세대",
+    "14세대",
+    "13세대",
+    "12세대",
+    "11세대",
+    "10세대",
+    "9세대",
+    "8세대",
+    "7세대",
+    "6세대",
+    "4세대",
+    "3세대",
+    "2세대",
+    "1세대",
     "AM5",
     "AM4",
     "라이젠 이전/구형",
@@ -100,10 +100,10 @@ else:
 
   df_cat = df_items[df_items["category"] == selected_cat]
 
-  # 2) 선택된 대분류에 해당하는 중분류(detail)만 추출 후 정렬
+  # 2) 선택된 대분류에 해당하는 중분류(detail) 추출
   raw_details = list(df_cat["detail"].unique()) if not df_cat.empty else []
 
-  # 정의한 순서(ORDERED_DETAILS)대로 정렬, 없는 항목은 뒤로 배치
+  # 정의한 최신순(ORDERED_DETAILS)대로 정렬
   sorted_details = sorted(
       raw_details,
       key=lambda x: (
