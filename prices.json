@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-11 12:33:15",
-  "count": 445,
+  "updated_at": "2026-09-12 12:38:03",
+  "count": 449,
   "items": [
     {
       "category": "CPU",
@@ -2736,8 +2736,22 @@
       "category": "SSD",
       "sub": "M.2",
       "detail": "NVMe / M.2 SSD",
+      "name": "32G DDR4 하이닉스",
+      "price": 120000
+    },
+    {
+      "category": "SSD",
+      "sub": "M.2",
+      "detail": "NVMe / M.2 SSD",
       "name": "32G DDR4 외산",
-      "price": 90000
+      "price": 100000
+    },
+    {
+      "category": "SSD",
+      "sub": "M.2",
+      "detail": "NVMe / M.2 SSD",
+      "name": "16G DDR4 하이닉스",
+      "price": 50000
     },
     {
       "category": "SSD",
@@ -2750,8 +2764,22 @@
       "category": "SSD",
       "sub": "M.2",
       "detail": "NVMe / M.2 SSD",
+      "name": "8G DDR4 하이닉스",
+      "price": 25000
+    },
+    {
+      "category": "SSD",
+      "sub": "M.2",
+      "detail": "NVMe / M.2 SSD",
       "name": "8G DDR4 외산",
       "price": 22000
+    },
+    {
+      "category": "SSD",
+      "sub": "M.2",
+      "detail": "NVMe / M.2 SSD",
+      "name": "4G DDR4 하이닉스",
+      "price": 10000
     },
     {
       "category": "SSD",
@@ -3509,9 +3537,13 @@
     "보드 B350": 15000,
     "보드 A320": 12000,
     "보드 X399": 40000,
-    "32G DDR4 외산": 90000,
+    "32G DDR4 하이닉스": 120000,
+    "32G DDR4 외산": 100000,
+    "16G DDR4 하이닉스": 50000,
     "16G DDR4 외산": 45000,
+    "8G DDR4 하이닉스": 25000,
     "8G DDR4 외산": 22000,
+    "4G DDR4 하이닉스": 10000,
     "4G DDR4 외산": 7000,
     "32G DDR5 외산": 230000,
     "16G DDR5 외산": 130000,
